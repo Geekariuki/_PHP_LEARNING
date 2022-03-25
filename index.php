@@ -17,4 +17,5 @@ $animals = [
 
 $greetings = "Hello World";
 
+
 require 'index.view.php'; //get everything from this path; 
