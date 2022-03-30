@@ -1,11 +1,6 @@
 <?php
 
-///connection 
-
-//go to this table fetch data
-
-//id| image_name | image 
-
+require 'functions.php';
 $title = "Tasks";
 
 //associateve arrays;
@@ -13,24 +8,17 @@ $title = "Tasks";
 $task =[
     'title' => 'Task A', 
     'assigned_to' => 'All Students', 
-    'due' => '29th March 22', 
+    'due' => '29th March 22',
+    'done' => true
 ]; //title, assigned_to, due, completed
 
-$task['done'] = true;
+if (ageLimit(10)) {
+    echo 'You can enter';
+} else {
+    echo 'You are underage';
+}
 
- $greetings =  'hi there';
 
-//  die(var_dump(strtoupper($greetings) ));
-
-// unset($task['assigned_to']);
-
-// die(var_dump($task['title']));
-
-// if ($task['done']) {
-//     //tick;
-// } else {
-//     //X;
-// }
-
+dd($task);
 
 require 'index.view.php'; //get everything from this path; 
