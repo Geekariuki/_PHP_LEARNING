@@ -18,16 +18,26 @@
     
     <header>
         <h1>
-            <?= $greetings; ?>
+            <?= $title; ?>
         </h1>
     </header>
 
     <ul>
-        <?php  foreach ($animals as $key => $animal_pic) :?>
-            <!-- you ccan do html here meanwhile as look to terminate the loop down in line 29 -->
-            <img src="<?= $animal_pic ?>" alt="" srcset="">
+        <?php  foreach ($task as $key => $value) :?>
+            <li> 
+                <strong><?= ucwords($key) ?> : </strong> 
+                <?= strtoupper($value)?>
+            </li>
         <?php endforeach; ?>
         <br>
+
+        <li> <strong>Task Name : </strong> <?= $task['title'] ?>  </li>
+        <li> <strong>Due Date : </strong> <?= $task['due'] ?>  </li>
+        <li> <strong>Person Responsible : </strong> <?= $task['assigned_to'] ?>  </li>
+        <li> 
+            <strong>Status: </strong>
+            <?= ($task['done']) ? 'Complete' : 'Incomplete' ; ?>
+        </li>
     </ul>
 </body>
 </html>
