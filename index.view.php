@@ -36,7 +36,13 @@
         <li> <strong>Person Responsible : </strong> <?= $task['assigned_to'] ?>  </li>
         <li> 
             <strong>Status: </strong>
-            <?= ($task['done']) ? 'Complete' : 'Incomplete' ; ?>
+
+            <?php if($task['done']) : ?>
+                <span class="icon">&#9989</span>
+            <?php else : ?>
+                <span class="icon">X</span>
+            <?php endif; ?>
+          
         </li>
     </ul>
 </body>

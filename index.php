@@ -26,5 +26,11 @@ $task['done'] = true;
 
 // die(var_dump($task['title']));
 
+// if ($task['done']) {
+//     //tick;
+// } else {
+//     //X;
+// }
+
 
 require 'index.view.php'; //get everything from this path; 
